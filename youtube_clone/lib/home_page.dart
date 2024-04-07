@@ -110,6 +110,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             expandedHeight: 105,
+
           ),
 
           SliverList(

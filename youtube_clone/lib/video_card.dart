@@ -23,9 +23,13 @@ class _VideoCardState extends State<VideoCard> {
   void startMove() async {
     while (_isMove) {
       await Future.delayed(Duration(milliseconds: 20));
+      print('실행중');
       setState(() {
         if (_playedPoint < rightEnd) {
           _playedPoint += rightEnd / 150;
+        } else {
+          _playedPoint = 0.0;
+          _isMove = false;
         }
       });
     }
